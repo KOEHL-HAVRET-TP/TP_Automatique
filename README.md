@@ -7,7 +7,10 @@ __Matériels à disposition__
 
 ## Github et Doxygen
 Sur __la master__ se trouve le projet CubeIDE.  
-Le dossier __html__ dans Cube IDE contient la documentation Doxygen
+Le dossier __html__ dans Cube IDE contient la documentation Doxygen  
+
+
+![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/fcc6e490f1d8087805aa1f0a3249d28175753caa/Images/image_pin_cubeIDE.JPG)
 
 ## TP1  : Commande MCC Basique
 
@@ -34,7 +37,6 @@ Le timer a été configuré avec :
 
 #### Observation à l'oscilloscope
 Observation à l'oscilloscope des signaux PWM générés:  
-![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/fcc6e490f1d8087805aa1f0a3249d28175753caa/Images/image_pin_cubeIDE.JPG)
 
 
 #### Mesures des temps morts  
