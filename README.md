@@ -11,7 +11,7 @@ Le dossier __html__ dans Cube IDE contient la documentation Doxygen
 
 ## TP1  : Commande MCC Basique
 
-### Prise en main de la Nuclé
+### Prise en main de la Nucléo
 Découverte du matériel, du PCB et de la Nucléo à notre disposition. Analyse du PCB et des différentes connexions établis entre la nucléo, le PCB et les divers composants.  
 
 ### Configuration sur CubeIDE 
@@ -22,19 +22,19 @@ Reprise du code de Mr Papazoglou pour la création du Shell et rajout des foncti
 Le Shell s'ouvre correctement et envoie les bons message à l'appel de "cmdNotFound", "help", "pinout", "powerOn" et "powerOff".  
 LE shell a été configuré à l'aide de liason UART. (USART2_RX et USART2_TX sur le .ioc de CubeIDE).  
 
-### Configuration des PWM  
-Configuration de 2 channel complémentaires de TIM1. TIM1CH1 et TIM1CH1N ainsi que TIM1CH2 et TIM2CH2N.  
-Calcul des valeurs de PSC (xxx) et ARR(xxx).  
+### PWM  
+#### Configuration Timer
+Configuration de 2 channel complémentaires de TIM1. TIM1CH1 et TIM1CH1N ainsi que TIM1CH2 et TIM1CH2N. (TIM1 sur le registre APB2) 
+Calcul des valeurs de PSC (xxx) et ARR(xxx). 
 Le timer a été configuré avec :  
 - Fréquence de la PWM : 16kHz
 - Temps mort minimum : 2us
 - Résolution minimum : 10bits
 - Rapport cyclique à 60%
 
+#### Observation à l'oscilloscope
 Observation à l'oscilloscope des signaux PWM générés:  
 
-Mesures des temps morts  
-
-
+#### Mesures des temps morts  
 Le DeadTime final rentré dans Cube IDE est de 210, pour une valeur "réelle" de 2.8 us (observée sur l'oscilloscope)
 
