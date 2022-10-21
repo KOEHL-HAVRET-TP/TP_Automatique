@@ -25,7 +25,7 @@ LE shell a été configuré à l'aide de liason UART. (USART2_RX et USART2_TX su
 ### PWM  
 #### Configuration Timer
 Configuration de 2 channel complémentaires de TIM1. TIM1CH1 et TIM1CH1N ainsi que TIM1CH2 et TIM1CH2N. (TIM1 sur le registre APB2) 
-Calcul des valeurs de PSC (xxx) et ARR(xxx). 
+Calcul des valeurs de PSC (10) et ARR(1062). 
 Le timer a été configuré avec :  
 - Fréquence de la PWM : 16kHz
 - Temps mort minimum : 2us
