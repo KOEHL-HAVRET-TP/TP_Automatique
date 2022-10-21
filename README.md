@@ -1,10 +1,40 @@
 # TP_Automatique  
 
-## TP1  
+__Matériels à disposition__  
+- Carte Nucleo-STM32G474RE
+- Hacheur 
+- MCC
 
-Prise en main de la STM  
-Configuration sur CubeIDE  
-Liaison UART pour envoi de commandes (Shell)  
-Configuration des PWM  
-Génération PWM et observation à l'oscilloscope  
+## Github et Doxygen
+Sur __la master__ se trouve le projet CubeIDE.  
+Le dossier __html__ dans Cube IDE contient la documentation Doxygen
+
+## TP1  : Commande MCC Basique
+
+### Prise en main de la Nuclé
+Découverte du matériel, du PCB et de la Nucléo à notre disposition. Analyse du PCB et des différentes connexions établis entre la nucléo, le PCB et les divers composants.  
+
+### Configuration sur CubeIDE 
+Configuration du projet CubeIDE avec l'ensemble des connexions necessaire au TP. 
+
+### Création du Shell
+Reprise du code de Mr Papazoglou pour la création du Shell et rajout des fonctions const uint8_t powerOn[] et const uint8_t powerOff[] qui ne contiennent pour le moment qu'un message.  
+Le Shell s'ouvre correctement et envoie les bons message à l'appel de "cmdNotFound", "help", "pinout", "powerOn" et "powerOff".  
+LE shell a été configuré à l'aide de liason UART. (USART2_RX et USART2_TX sur le .ioc de CubeIDE).  
+
+### Configuration des PWM  
+Configuration de 2 channel complémentaires de TIM1. TIM1CH1 et TIM1CH1N ainsi que TIM1CH2 et TIM2CH2N.  
+Calcul des valeurs de PSC (xxx) et ARR(xxx).  
+Le timer a été configuré avec :  
+- Fréquence de la PWM : 16kHz
+- Temps mort minimum : 2us
+- Résolution minimum : 10bits
+- Rapport cyclique à 60%
+
+Observation à l'oscilloscope des signaux PWM générés:  
+
 Mesures des temps morts  
+
+
+Le DeadTime final rentré dans Cube IDE est de 210, pour une valeur "réelle" de 2.8 us (observée sur l'oscilloscope)
+
