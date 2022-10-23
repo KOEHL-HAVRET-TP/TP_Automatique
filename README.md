@@ -9,7 +9,8 @@ __Matériels à disposition__
 Sur __la master__ se trouve le projet CubeIDE.  
 Le dossier __html__ dans Cube IDE contient la documentation Doxygen  
 
-## Configuration des pins du microprocesseurs
+## Configuration des pins du microprocesseurs  
+  
 ![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/fcc6e490f1d8087805aa1f0a3249d28175753caa/Images/image_pin_cubeIDE.JPG)
 
 ## TP1  : Commande MCC Basique
@@ -36,9 +37,10 @@ Le timer a été configuré avec :
 - Rapport cyclique à 60%
 
 #### Observation à l'oscilloscope
-Observation à l'oscilloscope des signaux PWM générés:  
-
+Observation à l'oscilloscope des signaux PWM générés: 
+  
+![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/deadTime.png)
 
 #### Mesures des temps morts  
-Le DeadTime final rentré dans Cube IDE est de 210, pour une valeur "réelle" de 2.8 us (observée sur l'oscilloscope)
+Le DeadTime final rentré dans Cube IDE est de 210, pour une valeur "réelle" de 2.352 us (observée sur l'oscilloscope).
 
