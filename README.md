@@ -39,7 +39,7 @@ Le timer a été configuré avec :
 #### Observation à l'oscilloscope
 Observation à l'oscilloscope des signaux PWM générés: 
   
-![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/deadTime.png)
+![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/deadTime_v2.png)
 
 #### Mesures des temps morts  
 Le DeadTime final rentré dans Cube IDE est de 23, pour une valeur "réelle" de 2.024 us (observée sur l'oscilloscope).
