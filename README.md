@@ -42,5 +42,5 @@ Observation à l'oscilloscope des signaux PWM générés:
 ![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/deadTime.png)
 
 #### Mesures des temps morts  
-Le DeadTime final rentré dans Cube IDE est de 210, pour une valeur "réelle" de 2.352 us (observée sur l'oscilloscope).
+Le DeadTime final rentré dans Cube IDE est de 23, pour une valeur "réelle" de 2.024 us (observée sur l'oscilloscope).
 
