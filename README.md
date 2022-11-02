@@ -27,6 +27,13 @@ LE shell a été configuré à l'aide de liason UART. (USART2_RX et USART2_TX su
 #### Configuration Timer
 Configuration de 2 channel complémentaires de TIM1. TIM1CH1 et TIM1CH1N ainsi que TIM1CH2 et TIM1CH2N. (TIM1 sur le registre APB2) 
 Calcul des valeurs de PSC (10) et ARR(1062). 
+
+#### Calcul du Dead Time  
+On veut DT = 2 us et on doit entrer 8 bits dans le registre du temps mort. 
+D'après les fréquences du timer et de l'horloge, le calcul donne 340, ce qui est codé sur plus de 8 bits (max 255) en binaire.  
+Les 2 MBS du registre du temps mort sont réservés. On calcule cette fois la valeur sur 6 bits et cette fois encore la valeur du registre dépasse le macimum sur 6 bits.  
+On réserve les 3 MBS puis par le calcul, on obtient le nombre 10 qui tient sur 4 bits en binaire (1010). Ainsi, on place dans le registre du temps mort une valeur de 202 au minimum (1100 1010).  
+
 Le timer a été configuré avec :  
 - Fréquence de la PWM : 16kHz
 - Temps mort minimum : 2us
@@ -34,7 +41,7 @@ Le timer a été configuré avec :
 - Rapport cyclique à 60%
 
 #### Observation à l'oscilloscope
-Observation à l'oscilloscope des signaux PWM générés: 
+Observation à l'oscilloscope des signaux PWM générés :
   
 ![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/deadTime_v2.png)
 
@@ -56,13 +63,13 @@ L'appel de la commande "start" se fera par le biais de la console UART, le "shel
 Pour effectuer les tests de fonctionnement de la commande "start" et le bon allumage du GPIO, nous faisons les tests avec une diode présente sur la carte Nucléo.  
 
 ### Commande de vitesse
-On configure la lecture de speed=xxxx sur le shell. Dans un premier temps on vérifie que les 6 premiers caractères entrés dans la console sont "speed=". Par la suite on relève la valeur de la vitesse que l'on converti en valeur numérique. 
+On configure la lecture de speed=xxxx sur le shell. Dans un premier temps on vérifie que les 6 premiers caractères entrés dans la console sont "speed=". Par la suite on relève la valeur de la vitesse que l'on convertit en valeur numérique. 
 
 La valeur de la vitesse est ensuite utilisée pour modifier, dans le code, les valeurs dans les 2 PWM afin de modifier la vitesse du moteur (modification du rapport cyclique).
 
 ### Premier test
 
-Une fois l'ensemble des branchements effectués (Carte - Hacheur - MCC), on met en route le moteur avec le shell. La comande "start" permet le premier démarrage et par la suite on modifie la vitesse avec "speed=xxxx" pour lancer le moteur.
-
+Une fois l'ensemble des branchements effectués (Carte - Hacheur - MCC), on met en route le moteur avec le shell. La comande "start" permet le premier démarrage et par la suite on modifie la vitesse avec "speed=xxxx" pour lancer le moteur. On configure au préalable dans le code un rapport cyclique de 50%.  
+Il faut augmenter le rapport cyclique de manière progressive de sorte à ce que le hacheur ne se mette pas en défaut. 
 
 ## TP2  : Mesure de Vitesse et de courant
