@@ -3,6 +3,13 @@
  ******************************************************************************
  * @file           : main.c
  * @brief          : Main program body
+ * @brief
+ * LE code dans le main permet de créer le shell dans lequel nous entrerons les commandes pour le moteur
+ * Nous configurons aussi la configuration de la vitesse du moteur avec son initialisation dans le shell, puis sa
+ *convertion en valeur numérique et la modification de  la valeur du rapport cyclique,
+ *convertion d'où l'accélération ou la décélération du moteur
+
+ *
  ******************************************************************************
  * @attention
  *
@@ -44,7 +51,7 @@
 #define ASCII_CR 0x0D
 // DEL = delete
 #define ASCII_DEL 0x7F
-
+//vitesse maximale du moteur
 #define Max_Pulse_Motor 1062
 
 /* USER CODE END PD */
@@ -57,6 +64,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
 uint8_t prompt[]="user@Nucleo-STM32G431>>";
 uint8_t started[]=
 		"\r\n*-----------------------------*"
@@ -71,12 +79,13 @@ uint8_t powerOn[]="Power ON\r\n";
 uint8_t powerOff[]="Power OFF\r\n";
 uint8_t vitesse[]="la vitesse est de ";
 uint8_t valeur_vitesse[4];
-uint8_t buffer_de_test[100];
+uint8_t buffer_affichage_vitesse[100];
 
 
 uint32_t uartRxReceived;
 uint8_t uartRxBuffer[UART_RX_BUFFER_SIZE];
 uint8_t uartTxBuffer[UART_TX_BUFFER_SIZE];
+
 extern GPIO_PinState PinState;
 
 /* USER CODE END PV */
@@ -221,8 +230,10 @@ int main(void)
 			{
 				HAL_UART_Transmit(&huart2, powerOff, sizeof(powerOff), HAL_MAX_DELAY);
 			}
+
 			else if(strncmp(argv[0],"speed=",6)==0 )
 			{
+
 				int i;
 				int speed_value;
 				for (i=0;i<6;i++){
@@ -235,12 +246,10 @@ int main(void)
 				TIM1->CCR1=speed_value*Max_Pulse_Motor/100;
 				TIM1->CCR2=(100-speed_value)*Max_Pulse_Motor/100;
 
-				//				HAL_UART_Transmit(&huart2, vitesse, sizeof(vitesse), HAL_MAX_DELAY);
-				//				HAL_UART_Transmit(&huart2, &valeur_vitesse, sizeof(valeur_vitesse), HAL_MAX_DELAY);
-				//				HAL_UART_Transmit(&huart2, "\n\r",2, HAL_MAX_DELAY);
 
-				sprintf(buffer_de_test,"La valeur de la vitesse est : %d \r\n",speed_value);
-				HAL_UART_Transmit(&huart2, buffer_de_test, sizeof(buffer_de_test), HAL_MAX_DELAY);
+
+				sprintf(buffer_affichage_vitesse,"La valeur de la vitesse est : %d \r\n",speed_value);
+				HAL_UART_Transmit(&huart2, buffer_affichage_vitesse, sizeof(buffer_affichage_vitesse), HAL_MAX_DELAY);
 
 
 			}
