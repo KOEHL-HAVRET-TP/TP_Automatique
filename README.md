@@ -41,12 +41,12 @@ Le timer a été configuré avec :
 - Rapport cyclique à 60%
 
 #### Observation à l'oscilloscope
-Observation à l'oscilloscope des signaux PWM générés :
+Observation à l'oscilloscope des signaux PWM générés avec un dead time supérieur à 2 us :
   
-![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/deadTime_v2.png)
+![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/PWM_comp_decal.png)
 
 #### Mesures des temps morts  
-Le DeadTime final rentré dans Cube IDE est de 23, pour une valeur "réelle" de 2.024 us (observée sur l'oscilloscope).  
+Le DeadTime final rentré dans Cube IDE est de 203, pour une valeur "réelle" de 2.024 us (observée sur l'oscilloscope).  
 
 ### Prise en main du hacheur
 A l'aide de la datasheet on repère les pins à connecter sur le hacheur.  
@@ -60,7 +60,11 @@ Les pins 12,13,30 et 31 seront réliés aux PWM.
 ### Commande Start
 On configure l'allumage de la pin ISO_Reset à l'aide la commande start, la pin devra s'allumer et s'éteindre quelques secondes après.  
 L'appel de la commande "start" se fera par le biais de la console UART, le "shell" crée précédemment. 
-Pour effectuer les tests de fonctionnement de la commande "start" et le bon allumage du GPIO, nous faisons les tests avec une diode présente sur la carte Nucléo.  
+Pour effectuer les tests de fonctionnement de la commande "start" et le bon allumage du GPIO, nous faisons les tests avec une diode présente sur la carte Nucléo. 
+
+Observation à l'oscilloscope du passage à l'état haut de la pin ISO_Reset sur la voie 4 avant de repasser à 0 :  
+  
+![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/Start.png)
 
 ### Commande de vitesse
 On configure la lecture de speed=xxxx sur le shell. Dans un premier temps on vérifie que les 6 premiers caractères entrés dans la console sont "speed=". Par la suite on relève la valeur de la vitesse que l'on convertit en valeur numérique. 
