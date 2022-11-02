@@ -23,7 +23,7 @@ Le Shell s'ouvre correctement et envoie les bons message à l'appel de "cmdNotFo
 LE shell a été configuré à l'aide de liason UART. (USART2_RX et USART2_TX sur le .ioc de CubeIDE).  
 
 ## TP1  : Commande MCC Basique
-### PWM  
+###### PWM  
 #### Configuration Timer
 Configuration de 2 channel complémentaires de TIM1. TIM1CH1 et TIM1CH1N ainsi que TIM1CH2 et TIM1CH2N. (TIM1 sur le registre APB2) 
 Calcul des valeurs de PSC (10) et ARR(1062). 
@@ -41,7 +41,7 @@ Observation à l'oscilloscope des signaux PWM générés:
 #### Mesures des temps morts  
 Le DeadTime final rentré dans Cube IDE est de 23, pour une valeur "réelle" de 2.024 us (observée sur l'oscilloscope).  
 
-### Prise en main du hacheur
+###### Prise en main du hacheur
 A l'aide de la datasheet on repère les pins à connecter sur le hacheur.  
 Nous utiliserons :
 - les pins 12 et 30 pour faire la connection de la phase Jaune 
@@ -50,11 +50,11 @@ Nous utiliserons :
 
 Les pins 12,13,30 et 31 seront réliés aux PWM.
 
-### Commande Start
+###### Commande Start
 On configure l'allumage de la pin ISO_Reset à l'aide la commande start, la pin devra s'allumer et s'éteindre quelques secondes après.  
 
-### Commande de vitesse
+###### Commande de vitesse
 
-### Premier test
+###### Premier test
 
 ## TP2  : Mesure de Vitesse et de courant
