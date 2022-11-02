@@ -56,7 +56,13 @@ L'appel de la commande "start" se fera par le biais de la console UART, le "shel
 Pour effectuer les tests de fonctionnement de la commande "start" et le bon allumage du GPIO, nous faisons les tests avec une diode présente sur la carte Nucléo.  
 
 ### Commande de vitesse
+On configure la lecture de speed=xxxx sur le shell. Dans un premier temps on vérifie que les 6 premiers caractères entrés dans la console sont "speed=". Par la suite on relève la valeur de la vitesse que l'on converti en valeur numérique. 
+
+La valeur de la vitesse est ensuite utilisée pour modifier, dans le code, les valeurs dans les 2 PWM afin de modifier la vitesse du moteur (modification du rapport cyclique).
 
 ### Premier test
+
+Une fois l'ensemble des branchements effectués (Carte - Hacheur - MCC), on met en route le moteur avec le shell. La comande "start" permet le premier démarrage et par la suite on modifie la vitesse avec "speed=xxxx" pour lancer le moteur.
+
 
 ## TP2  : Mesure de Vitesse et de courant
