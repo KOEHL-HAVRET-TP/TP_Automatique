@@ -18,6 +18,9 @@
 * @brief  contient le prompt comme sur un shell linux
 * */
 
+void allumage(){
+	HAL_GPIO_WritePin(ISO_RESET_GPIO_Port, ISO_RESET_Pin,1);
+}
 
 
 

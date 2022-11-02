@@ -42,6 +42,8 @@
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
 
+GPIO_PinState PinState=0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -222,6 +224,10 @@ void EXTI15_10_IRQHandler(void)
   /* USER CODE END EXTI15_10_IRQn 0 */
   HAL_GPIO_EXTI_IRQHandler(BUTTON_Pin);
   /* USER CODE BEGIN EXTI15_10_IRQn 1 */
+ 	 PinState=1-PinState;
+// 	 HAL_GPIO_WritePin(LED_GPIO_Port, LED_Pin, PinState);
+ 	 HAL_GPIO_WritePin(ISO_RESET_GPIO_Port, ISO_RESET_Pin, PinState);
+ 	 //HAL_Delay(200);
 
   /* USER CODE END EXTI15_10_IRQn 1 */
 }
