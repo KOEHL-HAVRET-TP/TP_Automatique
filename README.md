@@ -41,7 +41,7 @@ Le timer a été configuré avec :
 - Rapport cyclique à 60%
 
 #### Observation à l'oscilloscope
-Observation à l'oscilloscope des signaux PWM générés avec un dead time supérieur à 2 us :
+Observation à l'oscilloscope des signaux PWM complémentaires décalés générés avec un dead time supérieur à 2 us :
   
 ![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/PWM_comp_decal.png)
 
@@ -55,7 +55,10 @@ Nous utiliserons :
 - les pins 13 et 31 pour faire la connection de la phase Rouge
 - La pin 33 pour ISO_Reset (permettant le démarrage)
 
-Les pins 12,13,30 et 31 seront réliés aux PWM.
+Les pins 12,13,30 et 31 seront réliés aux PWM. CH1 et CH1N correspondent à la phase rouge et CH2 et CH2N à la phase jaune.  
+On adopte ce schéma de branchement du hacheur à partir des observations faites à l'oscilloscope :  
+
+![alt text](https://github.com/KOEHL-HAVRET-TP/TP_Automatique/blob/main/Images/Hacheur.JPG)
 
 ### Commande Start
 On configure l'allumage de la pin ISO_Reset à l'aide la commande start, la pin devra s'allumer et s'éteindre quelques secondes après.  
