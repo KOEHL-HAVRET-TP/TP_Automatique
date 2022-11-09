@@ -1,5 +1,9 @@
 # TP_Automatique  
 
+__Binôme :__
+Loïcia KOEHL  
+Alix HAVRET
+
 __Matériels à disposition__  
 - Carte Nucleo-STM32G474RE
 - Hacheur 
