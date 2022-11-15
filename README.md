@@ -1,6 +1,6 @@
 # TP_Automatique  
 
-__Binôme :__
+__Binôme :__  
 Loïcia KOEHL  
 Alix HAVRET
 
@@ -84,3 +84,28 @@ Une fois l'ensemble des branchements effectués (Carte - Hacheur - MCC), on met 
 Il faut augmenter le rapport cyclique de manière progressive de sorte à ce que le hacheur ne se mette pas en défaut. 
 
 ## TP2  : Mesure de Vitesse et de courant
+Nous avons entamé la mesure de vitesse et de courant vers la fin de la séance, divers problèmes nous ont bloqués pour effectuer ces mesures.  
+
+__Problèmes rencontrés :__
+Avec les PCB 
+
+- PCB avec LED défaillante pour l'alimentation, diodes cramées donc l'alimentation se bloque et aucune tension n'est appelée.
+- Cable d'alimentation PCB défaillant ( fils enlevés du connecteur)
+- PCB avec mauvaise soudure (connecteur de travers donc impossible d'utiliser ce PCB pour connecter la nucleo)
+- Dernier PCB utilisé : Diode à nouveau cramée pendant l'utilisation de la carte (consequence : arrêt du moteur immédiat, et LED éteinte)
+
+Avec d'autres matériels
+
+- Alimentation du hacheur défaillante (bloquée dans un mode inconnue, nombreuses recherches pour trouver le bon mode mais échec)
+- Passage d'un rapport cyclique de 55 à 60 impossible : arrêt du moteur. La vitesse était mise à 55, 58 puis 60.
+- Rapport cyclique des PWM et Dead Time modifié en cours de route 
+- Quelques erreurs de branchements parfois.
+
+Pour déterminer quels étaient les problèmes il était necessaire d'observer dans un premier temps nos signaux pour vérifier le bon envoie de ces derniers.  
+Nous avons également testé la phase bleu sur le hacheur (phase avec laquelle aucun élèves n'a eu de problème)
+
+
+Nous sommes passées à l'utilisation de l'ADC, la seule valeur envoyée était de 4096 (?) quelque soit la vitesse du moteur. 
+
+
+
