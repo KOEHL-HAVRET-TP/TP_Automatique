@@ -84,28 +84,32 @@ Une fois l'ensemble des branchements effectués (Carte - Hacheur - MCC), on met 
 Il faut augmenter le rapport cyclique de manière progressive de sorte à ce que le hacheur ne se mette pas en défaut. 
 
 ## TP2  : Mesure de Vitesse et de courant
-Nous avons entamé la mesure de vitesse et de courant vers la fin de la séance, divers problèmes nous ont bloqués pour effectuer ces mesures.  
+Nous avons entamé les mesures de vitesse et de courant vers la fin de la séance, divers problèmes nous ont bloqués pour effectuer ces mesures.  
 
 __Problèmes rencontrés :__
 Avec les PCB 
 
-- PCB avec LED défaillante pour l'alimentation, diodes cramées donc l'alimentation se bloque et aucune tension n'est appelée.
-- Cable d'alimentation PCB défaillant ( fils enlevés du connecteur)
+- PCB avec LED défaillante pour l'alimentation, diodes cramées au niveau de l'alimentation, aucun courant n'est appelé.
+- Câble d'alimentation du PCB défaillant (les fils sont sortis du connecteur)
 - PCB avec mauvaise soudure (connecteur de travers donc impossible d'utiliser ce PCB pour connecter la nucleo)
-- Dernier PCB utilisé : Diode à nouveau cramée pendant l'utilisation de la carte (consequence : arrêt du moteur immédiat, et LED éteinte)
+- Dernier PCB utilisé : Diode a cramé pendant l'utilisation de l'ensemble du montage (consequence : arrêt du moteur immédiat, et LED éteinte)
 
-Avec d'autres matériels
+Avec d'autres matériels ou logiciels  
 
-- Alimentation du hacheur défaillante (bloquée dans un mode inconnue, nombreuses recherches pour trouver le bon mode mais échec)
-- Passage d'un rapport cyclique de 55 à 60 impossible : arrêt du moteur. La vitesse était mise à 55, 58 puis 60.
-- Rapport cyclique des PWM et Dead Time modifié en cours de route 
-- Quelques erreurs de branchements parfois.
+- Alimentation du hacheur défaillante (bloquée dans un mode inconnu, nombreuses recherches pour trouver le bon mode mais échec)
+- Passage d'un rapport cyclique de 55 à 60 impossible : le moteur se met en défaut. Il faut monter progressivement la vitesse du moteur en passant de 55% à 58% puis 60%.  
+- Le moteur ne tournait pas malgré le démarrage et une vitesse mise à 50 :  
+La fréquence des PWM était trop faible (de l'ordre de 13kHz or 16kHz étaient nécessaires). On augmente le dead time (DT = 210).  
+Pour avoir une meilleure résolution on essaie de mettre le PSC à 0 en regardant si ARR ne dépasse pas la valeur maximale autorisée. ARR = f_timer/f_PWM/2  
+On divise par 2 car les PWM sont en mode center aligned donc le temps de montée du signal triangle est la moitié de la période du signal PWM.  
+On modifie les valeurs d'ARR et Pulse en conséquence dans CubeMX puis de Max_Pulse dans le code :  
+ARR = 170000/16/2 = 5312  
+Pulse = 5312/2 = 2656 et Max_Pulse = 5312
 
-Pour déterminer quels étaient les problèmes il était necessaire d'observer dans un premier temps nos signaux pour vérifier le bon envoie de ces derniers.  
-Nous avons également testé la phase bleu sur le hacheur (phase avec laquelle aucun élèves n'a eu de problème)
+Pour déterminer quels étaient les problèmes il était nécessaire d'observer dans un premier temps nos signaux pour vérifier le bon envoi de ces derniers.  
+Nous avons également testé la phase bleue sur le hacheur (phase avec laquelle aucun élève n'a eu de problème).
 
 
-Nous sommes passées à l'utilisation de l'ADC, la seule valeur envoyée était de 4096 (?) quelque soit la vitesse du moteur. 
-
+Nous sommes passées à l'utilisation de l'ADC, la seule valeur envoyée était de 4095 quelle que soit la vitesse du moteur. En récupérant la valeur de l'ADC branché que la masse, on obtenait bien 0 mais nous n'avons pas eu le temps de récupérer d'autres mesures et de trouver le problème lié à l'utilisation de l'ADC.
 
 
