@@ -121,5 +121,6 @@ var searchData=
   ['quadspi_5fsr_5ftef_5fmsk_118',['QUADSPI_SR_TEF_Msk',['../group___peripheral___registers___bits___definition.html#ga7f735f87bc58b45b805955787f44dc48',1,'stm32g474xx.h']]],
   ['quadspi_5fsr_5ftof_119',['QUADSPI_SR_TOF',['../group___peripheral___registers___bits___definition.html#ga76452c78d891392aad440842dc2882f6',1,'stm32g474xx.h']]],
   ['quadspi_5fsr_5ftof_5fmsk_120',['QUADSPI_SR_TOF_Msk',['../group___peripheral___registers___bits___definition.html#ga9c908040b579907946bac113088a3bbf',1,'stm32g474xx.h']]],
-  ['quadspi_5ftypedef_121',['QUADSPI_TypeDef',['../struct_q_u_a_d_s_p_i___type_def.html',1,'']]]
+  ['quadspi_5ftypedef_121',['QUADSPI_TypeDef',['../struct_q_u_a_d_s_p_i___type_def.html',1,'']]],
+  ['queueinjectedcontext_122',['QueueInjectedContext',['../struct_a_d_c___injection_conf_type_def.html#a58d9e1955c804425c2889e08999da5e2',1,'ADC_InjectionConfTypeDef']]]
 ];

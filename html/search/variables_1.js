@@ -61,8 +61,9 @@ var searchData=
   ['arr_58',['ARR',['../struct_l_p_t_i_m___type_def.html#a0aa430eedacf1806e078057cd5e6970c',1,'LPTIM_TypeDef::ARR()'],['../struct_t_i_m___type_def.html#a6a42766a6ca3c7fe10a810ebd6b9d627',1,'TIM_TypeDef::ARR()']]],
   ['autobaudrateenable_59',['AutoBaudRateEnable',['../struct_u_a_r_t___adv_feature_init_type_def.html#aa329d2b83700bfe0de99708eb3f7a465',1,'UART_AdvFeatureInitTypeDef']]],
   ['autobaudratemode_60',['AutoBaudRateMode',['../struct_u_a_r_t___adv_feature_init_type_def.html#a2f962d68e84dd709079aadcadd9d11cc',1,'UART_AdvFeatureInitTypeDef']]],
-  ['automaticoutput_61',['AutomaticOutput',['../struct_t_i_m___break_dead_time_config_type_def.html#ae591f2368d0be5b77d8a746e73eabe71',1,'TIM_BreakDeadTimeConfigTypeDef']]],
-  ['autoreloadpreload_62',['AutoReloadPreload',['../struct_t_i_m___base___init_type_def.html#a29e7b91a384f12e6be0f3ffb62ea1ea7',1,'TIM_Base_InitTypeDef']]],
-  ['awd2cr_63',['AWD2CR',['../struct_a_d_c___type_def.html#a02a34c693903ef6ac7326ed02582fdcf',1,'ADC_TypeDef']]],
-  ['awd3cr_64',['AWD3CR',['../struct_a_d_c___type_def.html#a3be9b42a9cf52d1b6776c2cfa439592f',1,'ADC_TypeDef']]]
+  ['autoinjectedconv_61',['AutoInjectedConv',['../struct_a_d_c___injection_conf_type_def.html#a39b2ddf75be46eb2d474e261e7b1c875',1,'ADC_InjectionConfTypeDef']]],
+  ['automaticoutput_62',['AutomaticOutput',['../struct_t_i_m___break_dead_time_config_type_def.html#ae591f2368d0be5b77d8a746e73eabe71',1,'TIM_BreakDeadTimeConfigTypeDef']]],
+  ['autoreloadpreload_63',['AutoReloadPreload',['../struct_t_i_m___base___init_type_def.html#a29e7b91a384f12e6be0f3ffb62ea1ea7',1,'TIM_Base_InitTypeDef']]],
+  ['awd2cr_64',['AWD2CR',['../struct_a_d_c___type_def.html#a02a34c693903ef6ac7326ed02582fdcf',1,'ADC_TypeDef']]],
+  ['awd3cr_65',['AWD3CR',['../struct_a_d_c___type_def.html#a3be9b42a9cf52d1b6776c2cfa439592f',1,'ADC_TypeDef']]]
 ];

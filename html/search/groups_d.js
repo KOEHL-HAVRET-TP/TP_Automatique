@@ -5,7 +5,7 @@ var searchData=
   ['peripheral_20adc_20clock_20source_20selection_2',['Peripheral ADC clock source selection',['../group___r_c_c___l_l___e_c___a_d_c___c_l_k_s_o_u_r_c_e.html',1,'']]],
   ['peripheral_20adc_20get_20clock_20source_3',['Peripheral ADC get clock source',['../group___r_c_c___l_l___e_c___a_d_c.html',1,'']]],
   ['peripheral_20clock_20source_4',['Peripheral Clock Source',['../group___r_c_c___l_l___e_f___peripheral___clock___source.html',1,'']]],
-  ['peripheral_20control_20functions_5',['Peripheral Control functions',['../group___c_o_r_t_e_x___exported___functions___group2.html',1,'(Global Namespace)'],['../group___p_w_r___exported___functions___group2.html',1,'(Global Namespace)'],['../group___u_a_r_t___exported___functions___group3.html',1,'(Global Namespace)']]],
+  ['peripheral_20control_20functions_5',['Peripheral Control functions',['../group___a_d_c___exported___functions___group3.html',1,'(Global Namespace)'],['../group___c_o_r_t_e_x___exported___functions___group2.html',1,'(Global Namespace)'],['../group___p_w_r___exported___functions___group2.html',1,'(Global Namespace)'],['../group___u_a_r_t___exported___functions___group3.html',1,'(Global Namespace)']]],
   ['peripheral_20i2c_20clock_20source_20selection_6',['Peripheral I2C clock source selection',['../group___r_c_c___l_l___e_c___i2_cx___c_l_k_s_o_u_r_c_e.html',1,'']]],
   ['peripheral_20i2c_20get_20clock_20source_7',['Peripheral I2C get clock source',['../group___r_c_c___l_l___e_c___i2_c1.html',1,'']]],
   ['peripheral_20i2s_20clock_20source_20selection_8',['Peripheral I2S clock source selection',['../group___r_c_c___l_l___e_c___i2_s___c_l_k_s_o_u_r_c_e.html',1,'']]],
